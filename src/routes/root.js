@@ -2,7 +2,8 @@ const root = server => {
   server.route({
     method: 'GET',
     path: '/',
-    handler: (req, h) => h.response({ success: true, message: 'OK.' }),
+    handler: (req, h) =>
+      h.response({ success: true, message: 'OK.' }).code(200),
   });
 
   server.route({
