@@ -61,7 +61,7 @@ const findUser = async (req, h) => {
   if (!result) {
     // Return a result here...
     const qr = response.quickReplies(
-      [{ button: 'Take Assesment', block: 'Assesment' }],
+      [{ button: 'Take Assesment', block: 'Terms & Conditions' }],
       `It seems your first time exploring here would you like me to asses you before we start finding your bud shall we? :)`
     );
 
