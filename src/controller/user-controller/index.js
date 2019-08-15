@@ -99,7 +99,7 @@ const deleteUser = async (req, h) => {
 
 const findUsers = async (req, h) => {
   //   const Model = Traveller();
-  //   const response = new HttpResponse();
+  const response = new HttpResponse();
   //   const ops = new Operations();
 
   //   const myDtl = await ops.getQuery(Model, { messengerUserId: req.params.user });
