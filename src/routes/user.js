@@ -10,15 +10,21 @@ const userRoutes = server => {
   });
 
   server.route({
+    method: 'POST',
+    path: `${apiDir}/delete/{user}`,
+    handler: user.deleteUser,
+  });
+
+  server.route({
     method: 'GET',
     path: `${apiDir}/find/{user}`,
     handler: user.findUser,
   });
 
   server.route({
-    method: 'POST',
-    path: `${apiDir}/delete/{user}`,
-    handler: user.deleteUser,
+    method: 'GET',
+    path: `${apiDir}/find`,
+    handler: user.findUsers,
   });
 };
 

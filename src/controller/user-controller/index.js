@@ -26,6 +26,10 @@ function parseData(data) {
   return { interests, status };
 }
 
+function randomNumber(max) {
+  return Math.floor(Math.random() * max) + 0;
+}
+
 // Handlers
 const createUser = async (req, h) => {
   const Model = Traveller();
@@ -93,8 +97,44 @@ const deleteUser = async (req, h) => {
   return response.respond(h, true, result, response.httpStatusCode.ok, 200);
 };
 
+const findUsers = async (req, h) => {
+  //   const Model = Traveller();
+  //   const response = new HttpResponse();
+  //   const ops = new Operations();
+
+  //   const myDtl = await ops.getQuery(Model, { messengerUserId: req.params.user });
+  //   const result = await ops.list(Model);
+
+  //   if (myDtl && myDtl.interest) {
+  //     const { interest } = myDtl;
+
+  //     // interest.forEach(val => {
+
+  //     // });
+  //   }
+  const picks = [];
+  //   if (result && result.length !== 0) {
+  let ctr = 0;
+  // let randomPick;
+
+  while (ctr <= 4) {
+    //   randomPick = result[randomNumber(result.length)];
+    picks.push({
+      title: 'Martin Martin',
+      image_url: 'https://profiles.utdallas.edu/img/default.png',
+      subtitle: 'I am Martin...',
+      buttons: [{ type: 'json_plugin_url', url: '', title: 'Invite' }],
+    });
+    ctr += 1;
+  }
+  //   }
+  const gallery = response.gallery(picks);
+  return response.chatfuelRespond(h, gallery, 200);
+};
+
 module.exports = {
   createUser,
   findUser,
+  findUsers,
   deleteUser,
 };

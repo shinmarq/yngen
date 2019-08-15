@@ -77,6 +77,23 @@ class HttpResponse {
       messages: [{ text: msg }],
     };
   }
+
+  gallery(elem) {
+    return {
+      message: [
+        {
+          attachment: {
+            type: 'template',
+            payload: {
+              template_type: 'generic',
+              image_aspect_ratio: 'square',
+              elements: elem,
+            },
+          },
+        },
+      ],
+    };
+  }
 }
 
 exports.HttpResponse = HttpResponse;
