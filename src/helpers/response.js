@@ -80,7 +80,7 @@ class HttpResponse {
 
   gallery(elem) {
     return {
-      message: [
+      messages: [
         {
           attachment: {
             type: 'template',
