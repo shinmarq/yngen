@@ -125,7 +125,7 @@ const findUsers = async (req, h) => {
       subtitle: 'I am Martin...',
       buttons: [
         {
-          type: 'web_url',
+          type: 'json_plugin_url',
           url: 'https://project-helia.herokuapp.com/',
           title: 'Invite',
         },
