@@ -125,9 +125,13 @@ const findUsers = async (req, h) => {
       subtitle: 'I am Martin...',
       buttons: [
         {
-          type: 'json_plugin_url',
-          url: 'https://project-helia.herokuapp.com/',
+          type: 'show_block',
+          //   url: 'https://project-helia.herokuapp.com/',
+          block_names: ['test'],
           title: 'Invite',
+          set_attributes: {
+            testId: 1111,
+          },
         },
       ],
     });
