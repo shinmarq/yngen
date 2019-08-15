@@ -123,7 +123,13 @@ const findUsers = async (req, h) => {
       title: 'Martin Martin',
       image_url: 'https://profiles.utdallas.edu/img/default.png',
       subtitle: 'I am Martin...',
-      buttons: [{ type: 'json_plugin_url', url: '', title: 'Invite' }],
+      buttons: [
+        {
+          type: 'json_plugin_url',
+          url: 'https://project-helia.herokuapp.com/',
+          title: 'Invite',
+        },
+      ],
     });
     ctr += 1;
   }
