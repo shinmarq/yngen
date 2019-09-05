@@ -2,12 +2,8 @@ const fs = require('fs');
 const { HttpResponse, Bitly } = require('../../helpers');
 
 function logURLs(logs) {
-  console.log(__dirname);
-  // prod
-  fs.writeFileSync(`app/src/tmp/logs.txt`, logs);
-
   // local/dev
-  //   fs.writeFileSync(`src/tmp/logs-${Date.now()}.txt`, logs);
+  fs.writeFileSync(`src/tmp/logs-${Date.now()}.txt`, logs);
 }
 
 const shortenedUrl = async (req, h) => {
@@ -17,8 +13,11 @@ const shortenedUrl = async (req, h) => {
   try {
     const result = await bitly.shortenedURL(uri);
 
-    // log
-    logURLs(`ts: ${Date.now()} - long: ${uri}, short: ${result.url} `);
+    /**
+     * @Logging
+     * remove comment if you wanna test logging locally for now it's not working in production testing due to ephemeral file system
+     */
+    // logURLs(`ts: ${Date.now()} - long: ${uri}, short: ${result.url} `);
 
     return response.success(
       h,
