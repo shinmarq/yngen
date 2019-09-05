@@ -2,7 +2,7 @@ const fs = require('fs');
 const { HttpResponse, Bitly } = require('../../helpers');
 
 function logURLs(logs) {
-  fs.writeFileSync(`src/tmp/logs-${Date.now()}.txt`, logs);
+  fs.writeFileSync(`${__dirname}src/tmp/logs-${Date.now()}.txt`, logs);
 }
 
 const shortenedUrl = async (req, h) => {
