@@ -4,7 +4,7 @@ const { HttpResponse, Bitly } = require('../../helpers');
 function logURLs(logs) {
   console.log(__dirname);
   // prod
-  fs.writeFileSync(`app/src/tmp/logs-${Date.now()}.txt`, logs);
+  fs.writeFileSync(`app/src/tmp/logs.txt`, logs);
 
   // local/dev
   //   fs.writeFileSync(`src/tmp/logs-${Date.now()}.txt`, logs);
