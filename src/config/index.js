@@ -2,7 +2,6 @@
  * @Config
  * you can add additional config keys/values
  */
-const { connection } = require('./database');
 
 const config = {
   PORT: process.env.PORT || 3000,
@@ -11,4 +10,3 @@ const config = {
 };
 
 exports.config = config;
-exports.connection = connection;

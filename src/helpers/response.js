@@ -29,70 +29,11 @@ class HttpResponse {
   }
 
   failure(h, data, response, code) {
-    this.respond(h, true, data, response, code);
+    return this.respond(h, false, data, response, code);
   }
 
   success(h, data, response, code) {
-    this.respond(h, true, data, response, code);
-  }
-
-  chatfuelRespond(h, data, code) {
-    return h.response(data).code(code);
-  }
-
-  quickReplies(opts = [], msg = '') {
-    const qr = [];
-    const obj = {};
-
-    opts.forEach(val => {
-      if (val.block) {
-        obj.block_names = [val.block];
-      }
-
-      if (val.attributes) {
-        obj.set_attributes = val.attributes;
-      }
-
-      obj.title = val.button;
-
-      qr.push(obj);
-    });
-
-    return {
-      messages: [
-        {
-          text: msg,
-          quick_replies: qr,
-        },
-      ],
-    };
-  }
-
-  redirectToBlock(block) {
-    return { redirect_to_blocks: [block] };
-  }
-
-  sendTextMessage(msg) {
-    return {
-      messages: [{ text: msg }],
-    };
-  }
-
-  gallery(elem) {
-    return {
-      messages: [
-        {
-          attachment: {
-            type: 'template',
-            payload: {
-              template_type: 'generic',
-              image_aspect_ratio: 'square',
-              elements: elem,
-            },
-          },
-        },
-      ],
-    };
+    return this.respond(h, true, data, response, code);
   }
 }
 

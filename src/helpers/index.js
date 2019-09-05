@@ -1,5 +1,5 @@
 const { HttpResponse } = require('./response');
-const { Operations } = require('./data-operations');
+const { Bitly } = require('./bitly-helper');
 
 exports.HttpResponse = HttpResponse;
-exports.Operations = Operations;
+exports.Bitly = Bitly;

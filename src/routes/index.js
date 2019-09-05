@@ -1,7 +1,7 @@
 const { root } = require('./root');
-const { user } = require('./user');
+const { bitly } = require('./bitly');
 
 exports.routes = server => {
   root(server);
-  user(server);
+  bitly(server);
 };
