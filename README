@@ -1,10 +1,29 @@
 no need for UI just hit the endpoint on POSTMAN
 
+Production testing
 METHOD: POST
-ENDPOINT: https://yngen.herokuapp.com/api/url-shortener
+ENDPOINT: https://yngen.herokuapp.com/api/url-shortener 
 BODY: {
     "longUrl": <longUrl>
 }
+
+**** sample response: {
+    "status": "OK",
+    "success": true,
+    "data": {
+        "shortUrl": "http://bit.ly/2HNHSpR"
+    }
+}
+=========================
+=========================
+Local/dev testing
+METHOD: POST
+ENDPOINT: localhost:3000/api/url-shortener 
+BODY: {
+    "longUrl": <longUrl>
+}
+
+****NOTE uncomment the logUrl method in controller to test the logs of url and timestamp
 
 **** sample response: {
     "status": "OK",
