@@ -6,4 +6,12 @@ BODY: {
     "longUrl": <longUrl>
 }
 
+**** sample response: {
+    "status": "OK",
+    "success": true,
+    "data": {
+        "shortUrl": "http://bit.ly/2HNHSpR"
+    }
+}
+
 bitly:26fcf8bccd20960c7a6bb516919df0e412f6a56f
