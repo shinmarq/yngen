@@ -1,0 +1,9 @@
+no need for UI just hit the endpoint on POSTMAN
+
+METHOD: POST
+ENDPOINT: https://yngen.herokuapp.com/api/url-shortener
+BODY: {
+    "longUrl": <longUrl>
+}
+
+bitly:26fcf8bccd20960c7a6bb516919df0e412f6a56f
