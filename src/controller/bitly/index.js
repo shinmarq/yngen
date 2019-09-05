@@ -22,6 +22,7 @@ const shortenedUrl = async (req, h) => {
       200
     );
   } catch (e) {
+    console.log(e);
     throw e;
   }
 };
